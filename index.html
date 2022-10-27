@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUE TO DO LIST </title>
+    <!-- fontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <!-- Style css -->
+    <link rel="stylesheet" href="css/style.css">
+     <!-- Vue -->
+     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    
+
+    <div id="app" class="container mt-5 justify-content-center">
+        <!-- Header -->
+        <header class="pt-5 d-flex justify-content-center">
+            <h1><i class="fa-solid fa-clipboard-list"></i>  Vue To Do List</h1>
+        </header>
+        <!-- Main -->
+        <main>
+            <div class="newTodo d-flex justify-content-center mt-3">
+                <label for="insert-todo"></label>
+                <input  type="text" id="insert-todo" v-model="userTodo">
+                <button @click="addTodo" class="btn btn-light"> Inserisci </button>
+            </div>
+            <div class="card-todo d-flex justify-content-center mt-4">
+                <ul>
+                    <!--MILESTONE 1
+                        Stampare all'interno di una lista, un item per ogni todo. -->
+                    <li v-for="(valore , indice ) in todo"> {{todo[indice].name}}
+                        <!--MILESTONE 2
+                            Visualizzare a fianco ad ogni item ha una "x": cliccando su di essa, il todo viene rimosso dalla lista. -->
+                        <span>&cross;</span>
+                    </li>
+                </ul>
+            </div>
+           
+        </main>
+        <!-- Footer -->
+        <footer>
+
+        </footer>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
