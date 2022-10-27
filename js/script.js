@@ -33,10 +33,13 @@ createApp({
         removeTodo: function(indexTodo){
             this.todo.splice(indexTodo , 1);
         },
-        todoConcluded: function(){
-            if( this.todo.done === false){
-                alert(ciao);
-                this.todo.done = true;
+        todoConcluded: function(index){
+            if( this.todo[index].done === false){
+                console.log('hello: ', index);
+                this.todo[index].done = true;
+                console.log(this.todo[index].done);
+            }else{
+                this.todo[index].done = false;
             }
         }
     }

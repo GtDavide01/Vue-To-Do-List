@@ -37,8 +37,8 @@
                     <!--MILESTONE 1
                         Stampare all'interno di una lista, un item per ogni todo. -->
                     <li v-for="(valore , indice ) in todo">
-                    <span :class="(todo[indice].done === false) ? "todo-done-true" " @click="todoConcluded">
-                            {{todo[indice].name}}
+                        <span :class="valore.done === true ? 'todo-done-true' : '' " @click="todoConcluded(indice)">
+                            {{valore.name}}
                         </span> 
                         <!--MILESTONE 2
                             Visualizzare a fianco ad ogni item ha una "x": cliccando su di essa, il todo viene rimosso dalla lista. -->
