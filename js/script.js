@@ -31,7 +31,7 @@ createApp({
     },
     methods: {
         addTodo: function(){
-            todo.push(this.userTodo);
+            todo.unshift(this.userTodo);
         }
     }
 }).mount("#app");
