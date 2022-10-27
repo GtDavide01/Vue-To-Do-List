@@ -45,6 +45,7 @@
                         <!--MILESTONE 2
                             Visualizzare a fianco ad ogni item ha una "x": cliccando su di essa, il todo viene rimosso dalla lista. -->
                         <span :class="valore.done === true ? 'display-none' : ''" class="remove-todo" @click="removeTodo(indice)">&cross;</span>
+                        <span :class="valore.done === true ? 'display-block-green' : 'display-none'">&check;</span>
                     </li>
                 </ul>
             </div>
