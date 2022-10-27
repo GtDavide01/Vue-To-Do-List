@@ -31,7 +31,11 @@ createApp({
     },
     methods: {
         addTodo: function(){
-            todo.unshift(this.userTodo);
+            this.todo.unshift({ name: this.userTodo , done: false});
+            this.userTodo = "";
+        },
+        removeTodo: function(indexTodo){
+            this.todo.splice(indexTodo , 1);
         }
     }
 }).mount("#app");
