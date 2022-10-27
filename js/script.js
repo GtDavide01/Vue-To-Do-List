@@ -4,7 +4,6 @@
 // - done, un booleano (true/false) che indica se il todo è stato fatto oppure no
 // Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato.
 
-// 2- cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
 
 //Collego vue 
 const {createApp} = Vue; 
@@ -14,14 +13,7 @@ createApp({
         return{
             userTodo:"",
             todo: [
-                {
-                    name: "Fare i compiti per casa",
-                    done: false
-                },
-                {
-                    name: "Andare in palestra",
-                    done:false
-                }
+               
             ],
         }
     },
