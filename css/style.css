@@ -31,3 +31,6 @@ main li{
     border-bottom: 1px solid black;
     padding: .5rem 0;
 }
+.remove-todo{
+    color: red;
+}

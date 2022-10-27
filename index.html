@@ -36,7 +36,7 @@
                     <li v-for="(valore , indice ) in todo"> {{todo[indice].name}}
                         <!--MILESTONE 2
                             Visualizzare a fianco ad ogni item ha una "x": cliccando su di essa, il todo viene rimosso dalla lista. -->
-                        <span @click="removeTodo(indice)">&cross;</span>
+                        <span class="remove-todo" @click="removeTodo(indice)">&cross;</span>
                     </li>
                 </ul>
             </div>
