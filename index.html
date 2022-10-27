@@ -26,14 +26,20 @@
         <main>
             <div class="newTodo d-flex justify-content-center mt-3">
                 <label for="insert-todo"></label>
-                <input  type="text" id="insert-todo" v-model="userTodo">
+                <!-- Bonus 1 - oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista -->
+                <input @keyup.enter="addTodo" type="text" id="insert-todo" v-model.trim="userTodo">
+                <!--  MILESTONE 3
+                 Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul pulsante, il testo digitato viene letto e utilizzato per creare un nuovo todo, che quindi viene aggiunto alla lista dei todo esistenti. -->
                 <button @click="addTodo" class="btn btn-light"> Inserisci </button>
             </div>
             <div class="card-todo d-flex justify-content-center mt-4">
                 <ul>
                     <!--MILESTONE 1
                         Stampare all'interno di una lista, un item per ogni todo. -->
-                    <li v-for="(valore , indice ) in todo"> {{todo[indice].name}}
+                    <li v-for="(valore , indice ) in todo">
+                    <span :class="(todo[indice].done === false) ? "todo-done-true" " @click="todoConcluded">
+                            {{todo[indice].name}}
+                        </span> 
                         <!--MILESTONE 2
                             Visualizzare a fianco ad ogni item ha una "x": cliccando su di essa, il todo viene rimosso dalla lista. -->
                         <span class="remove-todo" @click="removeTodo(indice)">&cross;</span>

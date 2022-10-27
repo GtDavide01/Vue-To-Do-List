@@ -34,3 +34,6 @@ main li{
 .remove-todo{
     color: red;
 }
+.todo-done-true{
+    text-decoration: line-through;
+}
